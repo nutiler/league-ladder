@@ -1,0 +1,29 @@
+{
+  "name": "league-ladder",
+  "version": "1.0.5",
+  "description": "todo",
+  "main": "server.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha",
+    "start": "node server.js",
+    "heroku-postbuild": "knex migrate:latest"
+  },
+  "engines": {
+    "node": "6.4.0"
+  },
+  "author": "nutiler",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "body-parser": "^1.15.2",
+    "cookie-session": "^2.0.0-alpha.1",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "flash": "^1.1.0",
+    "hbs": "^4.0.1",
+    "knex": "^0.12.2",
+    "method-override": "^2.3.6",
+    "pg": "^6.1.0",
+    "request": "^2.81.0"
+  }
+}

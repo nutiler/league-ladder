@@ -1,0 +1,34 @@
+{{#each stats}}
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title"><a href="/stats/{{id}}">{{username}}</a></h3>
+    </div>
+    <div class="panel-body list-group-item">
+      <img src="http://ddragon.leagueoflegends.com/cdn/7.5.1/img/profileicon/{{avatar}}.png"> Points: {{points}} [{{maxelo}}] {{win}}:{{loss}}
+    </div>
+  </div>
+{{/each}}
+
+<script>
+  var userlist = new Array(); 
+  {{#each stats}} //special type of forloop with handlebars
+  userlist.push('{{username}}'); 
+  {{/each}}
+      $(document).ready(function() {
+        $(userlist).each(function(index, item) {
+          var option = $('<option value="' + item + '"></option>');
+          $('#userlist').append(option);
+        });
+      });
+</script>
+
+</ul>
+<a type="button" class="btn btn-default btn-primary" href="/stats/add">
+  SINGLE ADD
+</a>
+<a type="button" class="btn btn-default btn-primary" href="/stats/match">
+  MATCH SET
+</a>
+<a type="button" class="btn btn-default btn-primary" href="/auth/login">
+  ADMIN LOGIN
+</a>

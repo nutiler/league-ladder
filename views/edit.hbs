@@ -1,0 +1,61 @@
+<form id="edit" class="form" action="/stats/{{id}}?_method=PUT" method="post">
+    <div class="form-group">
+        <label for="username">username</label>
+        <input value="{{username}}" type="text" class="form-control" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+        <label for="win">win:</label>
+        <input value="{{win}}" type="number" class="form-control" id="win" name="win" required>
+        </input>
+    </div>
+    <div class="form-group">
+        <label for="loss">loss:</label>
+        <input value="{{loss}}" type="number" class="form-control" id="loss" name="loss" required>
+        </input>
+    </div>
+    <div class="form-group">
+        <label for="summonerid">summonerid:</label>
+        <input value="{{summonerid}}" type="number" class="form-control" id="summonerid" name="summonerid" readonly>
+        </input>
+    </div>
+    <div class="form-group">
+        <label for="points">points:</label>
+        <input value="{{points}}" type="number" class="form-control" id="points" name="points" readonly>
+        </input>
+    </div>
+    <div class="form-group">
+        <label for="total">maxelo:</label>
+        <input value="{{maxelo}}" type="number" class="form-control" id="maxelo" name="maxelo" readonly>
+        </input>
+    </div>
+    <div class="form-group">
+        <label for="total">avatar:</label>
+        <input value="{{avatar}}" type="number" class="form-control" id="avatar" name="avatar" readonly>
+        </input>
+    </div>
+    <button type="submit" class="btn btn-default btn-success">
+   EDIT
+   </button>
+</form>
+<script>
+    // $(document).ready(function() {
+    //     if ({
+    //             {
+    //                 total
+    //             }
+    //         } <= $('#points').val()) {
+    //         $('#total').val($('#points').val());
+    //     }
+
+    //     $('#edit').submit(function() {
+    //         if ({
+    //                 {
+    //                     total
+    //                 }
+    //             } <= $('#points').val()) {
+    //             $('#total').val($('#points').val());
+    //         }
+    //     });
+
+    // });
+</script>
