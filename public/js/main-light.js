@@ -65,7 +65,7 @@ $(document).ready(function(){
     $('#fullpage').fullpage({
         anchors: ['Home-1', 'About-2', 'Portfolio-3', 'Contact-4'],
         navigation: true,
-        navigationTooltips: ['Home', 'About', 'Portfolio', 'Contact'],
+        navigationTooltips: ['Home', 'About', 'Media', 'League'],
         responsiveWidth: 1025
     });
 

@@ -1,19 +1,13 @@
-<h2>{{username}}</h2>
-<h5>[{{summonerid}}]</h5>
-
-<img src="http://ddragon.leagueoflegends.com/cdn/7.5.1/img/profileicon/{{avatar}}.png">
-<ul class="breadcrumb">
-  Points: {{points}} [{{maxelo}}] {{win}}:{{loss}}
-</ul>
-
+{{username}} [{{summonerid}}]
+<br><img src="http://ddragon.leagueoflegends.com/cdn/7.5.1/img/profileicon/{{avatar}}.png">
+<br>{{points}} [{{maxelo}}] {{win}}:{{loss}}
 <form action="/stats/{{id}}?_method=DELETE" method="post">
-  <a href="/stats/{{id}}/edit" type="button" class="btn btn-default btn-warning">
-    EDIT SCORE
+
+  <button type="submit" class="btn btn-default btn-danger">DELETE</button>
+    <a href="/stats/{{id}}/edit" type="button" class="btn btn-default btn-warning">
+    EDIT
   </a>
-  <button type="submit" class="btn btn-default btn-danger">
-    DELETE SCORE
-  </button>
-  <a href="/stats" type="button" class="btn btn-default">
-    BACK
+  <a href="/stats/match" type="button" class="btn btn-default btn-warning">
+    MATCH
   </a>
 </form>

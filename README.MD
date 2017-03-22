@@ -40,3 +40,19 @@ createdb league-ladder
 psql
 \password postgres
 knex migrate:latest
+
+
+
+
+LOGIN
+====
+USER
+PASS
+EMAIL
+ADMIN (NO USE FOR REG USERS)
+
+LOGIN
+====
+EMAIL [x]
+PASS [x]
+
