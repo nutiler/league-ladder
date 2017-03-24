@@ -59,6 +59,7 @@ router.post('/signup', function(req, res, next) {
 })
 
 router.post('/login', function(req, res, next) {
+    console.log(req.body)
     knex('users')
         .where({
             username: req.body.username
@@ -66,15 +67,15 @@ router.post('/login', function(req, res, next) {
         .first()
         .then(function(user) {
             if (!user) {
-                res.send('no username')
+                res.send('failure')
             } else {
                 bcrypt.compare(req.body.hashed_password, user.hashed_password, function(err, result) {
                     if (result) {
                         req.session.user = user;
                         res.cookie("loggedin", true);
-                        res.redirect('/stats');
+                        res.send('successful');
                     } else {
-                        res.redirect('/auth/login');
+                        res.send('failure');
                     }
                 });
             }

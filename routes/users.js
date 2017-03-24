@@ -38,6 +38,8 @@ router.get('/login', function(req, res, next) {
 })
 
 router.post('/signup', function(req, res, next) {
+    // console.log(req.body)
+    // console.log(res)
     knex('users')
         .where({
             username: req.body.username
